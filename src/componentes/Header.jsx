@@ -29,12 +29,12 @@ export default function Header() {
                     <div className="d-flex align-items-center gap-3 flex-wrap">
                         <nav className="d-none d-lg-flex bp-nav">
                             <Link to="/">Home</Link>
-                            
+                            <Link to="/catalogo">Catálogo</Link>
                             <Link to="/cadastro">Cadastro</Link>
                         </nav>
 
                         <Link to="/login" className="bp-btn-admin">
-                            Login Admin
+                            Login
                         </Link>
                     </div>
                 </div>

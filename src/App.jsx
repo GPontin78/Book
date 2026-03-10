@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./componentes/Header";
-import Hero from "./componentes/Hero";
 import Footer from "./componentes/Footer";
+import Home from "./componentes/Home";
 import Login from "./componentes/Login";
 import Cadastro from "./componentes/Cadastro";
-
-function Home() {
-    return <Hero />;
-}
+import Catalogo from "./componentes/Catalogo";
+import Livro from "./componentes/Livro";
+import Erro from "./componentes/Erro";
 
 export default function App() {
     return (
@@ -19,6 +18,9 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/catalogo" element={<Catalogo />} />
+                <Route path="/livro" element={<Livro />} />
+                <Route path="*" element={<Erro />} />
             </Routes>
 
             <Footer />
