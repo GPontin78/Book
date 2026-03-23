@@ -10,7 +10,11 @@ import Livro from "./componentes/Livro";
 import Erro from "./componentes/Erro";
 
 export default function App() {
+
+
+
     return (
+
         <BrowserRouter>
             <Header />
 
@@ -19,7 +23,7 @@ export default function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/catalogo" element={<Catalogo />} />
-                <Route path="/livro" element={<Livro />} />
+                <Route path="/livro/:id" element={<Livro />} />
                 <Route path="*" element={<Erro />} />
             </Routes>
 
