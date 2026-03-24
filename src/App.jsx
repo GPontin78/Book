@@ -7,6 +7,8 @@ import Login from "./componentes/Login";
 import Cadastro from "./componentes/Cadastro";
 import Catalogo from "./componentes/Catalogo";
 import Livro from "./componentes/Livro";
+import CadastroLivro from "./componentes/CadastroLivro.jsx";
+import ListaLivro from "./componentes/ListaLivros.jsx";
 import Erro from "./componentes/Erro";
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/catalogo" element={<Catalogo />} />
                 <Route path="/livro/:id" element={<Livro />} />
+                <Route path="/cadastroLivro" element={<CadastroLivro/>} />
+                <Route path="/listaLivro" element={<ListaLivro/>} />
                 <Route path="*" element={<Erro />} />
             </Routes>
 

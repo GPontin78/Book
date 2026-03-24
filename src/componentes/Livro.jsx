@@ -1,44 +1,59 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 
 export default function Livro() {
 
     const { id } = useParams();
-    const [livro, setLivro] = useState(null);
+    const [livro, setLivro] = useState({});
 
     async function buscarLivro() {
-        let resposta = await fetch("https://apps-api-livros.ucxocw.easypanel.host/livro");
+
+        let resposta = await fetch("https://apps-api-livros.ucxocw.easypanel.host/livro/" + id);
         let dados = await resposta.json();
 
-        let livroEncontrado = dados.livros.find(function (item) {
-            return item.id == id;
-        });
-
-        setLivro(livroEncontrado);
+        if (dados.livro) {
+            setLivro(dados.livro);
+        } else {
+            setLivro(dados);
+        }
     }
 
-
+    useEffect(function () {
+        buscarLivro();
+    }, []);
 
     return (
-        <div className="container mt-5 livro">
-            <div className="row align-items-center">
+        <div className="livro-container">
 
-                <div className="col-md-4 text-center">
+            {livro.id ? (
+                <div className="livro-box">
+
                     <img
                         src={livro.imagem}
-                        alt={livro.titulo}
-                        className="livro-imagem"
+                        className="livro-img-grande"
                     />
-                </div>
 
-                <div className="col-md-8">
-                    <h1>{livro.titulo}</h1>
-                    <p><strong>Autor:</strong> {livro.autor}</p>
-                    <p><strong>Categoria:</strong> {livro.categoria}</p>
-                    <p>{livro.descricao}</p>
-                </div>
+                    <div className="livro-detalhes">
+                        <h1>{livro.titulo}</h1>
 
-            </div>
+                        <p><b>Autor:</b> {livro.autor}</p>
+                        <p><b>Categoria:</b> {livro.categoria}</p>
+                        <p><b>Faixa Etária:</b> {livro.faixa_etaria}</p>
+
+                        <p>{livro.descricao}</p>
+
+                        <Link to="/catalogo">
+                            <button className="btn-voltar">
+                                Voltar
+                            </button>
+                        </Link>
+                    </div>
+
+                </div>
+            ) : (
+                <p>Carregando...</p>
+            )}
+
         </div>
     );
 }

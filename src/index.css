@@ -366,3 +366,176 @@ body {
   font-size: 18px;
   color: #666;
 }
+/* LISTA */
+.lista-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* CARD */
+.livro-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* IMAGEM */
+.livro-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* TITULO */
+.livro-titulo {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+/* TEXTO */
+.livro-info {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOTÕES */
+.livro-botoes {
+  margin-top: 10px;
+}
+
+.btn-editar {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-excluir {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background: #45a049;
+}
+
+.btn-excluir:hover {
+  background: #d32f2f;
+}
+
+/* CONTAINER */
+.livro-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* CARD */
+.livro-box {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* IMAGEM */
+.livro-img-grande {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* INFO */
+.livro-detalhes h1 {
+  margin-bottom: 10px;
+}
+
+.livro-detalhes p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-voltar:hover {
+  background: #555;
+}
+
+/* CONTAINER */
+.catalogo-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* TITULO */
+.catalogo-titulo {
+  margin-bottom: 15px;
+}
+
+/* BUSCA */
+.catalogo-busca {
+  padding: 8px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.catalogo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* CARD */
+.catalogo-card {
+  width: 180px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* IMAGEM */
+.catalogo-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* TEXTO */
+.catalogo-nome {
+  margin: 8px 0 5px;
+}
+
+.catalogo-autor {
+  font-size: 14px;
+  color: #555;
+}
